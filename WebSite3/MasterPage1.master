@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage1.master.cs" Inherits="MasterPage1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>admin master</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 20px; /* Increased padding for more height */
+            display: flex;
+            align-items: center;
+            height: 80px; /* Increased navbar height */
+        }
+
+        .logo img {
+            width: 70px; /* Increased image size */
+            height: auto;
+            margin-right: 20px; /* Added margin between logo and menu */
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Align the menu items to the center */
+        }
+
+        .menu ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px; /* Increased padding for more height */
+            font-size: 18px; /* Increased font size */
+        }
+
+        .menu ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            
+            
+            width: 100%;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <span style="font-weight: bold; font-size: 20px;">ShoesShop</span> <!-- Increased font size for the name -->
+        <div class="navbar">
+            <div class="logo">
+                <img src="https://media.istockphoto.com/id/1279108197/photo/variety-of-womens-fashion-comfortable-shoes-of-all-seasons-on-a-light-background-top-view.jpg?s=612x612&w=is&k=20&c=qxCXUXW9SA8On2Kij0gubrVe97DS-mcTxoz-QfkeBto=" alt="Logo" style="height: 70px; width: 70px;" />
+            </div>
+            
+            <div class="menu">
+                <ul>
+                    
+                    <li><a href="adminregisterupdate.aspx">User Update</a></li>
+                    <li><a href="productupdate.aspx">ProductUpdate</a></li>
+                    <li><a href="login.aspx">login</a></li>
+                    <li><a href="stock.aspx">stock</a></li>
+                    <li><a href="admin.aspx">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer>
+            <div class="footer">
+                <span>© 2024 Shoes Shop</span>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>

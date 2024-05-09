@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="NewMasterpage2.master.cs" Inherits="NewMasterpage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Shoes Shop</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Hide overflow to prevent horizontal scrollbars */
+    }
+
+    .header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        overflow: hidden; /* Hide overflow to prevent horizontal scrollbars */
+    }
+
+    .header h1 {
+        margin: 0; /* Remove default margin for h1 */
+        animation: moveUpDown 4s linear infinite; /* Apply animation */
+    }
+
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateY(0); /* Start and end position (no movement) */
+        }
+        50% {
+            transform: translateY(-20px); /* Middle position, move up by 20 pixels */
+        }
+    }
+
+    .navbar {
+        background-color: #212529; /* Darker background color */
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center; /* Center the links vertically */
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: #fff;
+        margin: 0 20px; /* Add spacing between links */
+        transition: color 0.3s; /* Smooth transition for color change */
+        font-size:25px;
+    }
+
+    .navbar a:hover {
+        color: #f8f9fa; /* Change color on hover */
+    }
+
+    .navbar img {
+        width: 50px; /* Set the width of the logo */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Add space to the right of the logo */
+    }
+
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+
+
+</head>
+<body>
+    <div class="header">
+        <h1>Shoes Shop</h1>
+    </div>
+
+    <div class="navbar">
+        <img src="image/logo.jpg" alt="Logo" style="width: 80px; height: 80px;" /> <!-- Replace 'image/logo.jpg' with your actual logo image path -->
+     <center>   <a href="#">Home</a></center>
+        <a href="#">Men's Shoes</a>
+        <a href="#">Women's Shoes</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        <!-- Main content will go here -->
+    </asp:ContentPlaceHolder>
+
+    <div class="footer">
+        <p>Copyright © 2024 Shoes Shop. All rights reserved.</p>
+    </div>
+</body>
+</html>
